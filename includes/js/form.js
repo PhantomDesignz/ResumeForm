@@ -16,6 +16,12 @@ var step2_tempemploy,
 	step2_evenings,
 	step2_shiftwork,
 	step2_overtime;
+
+var step3_school,
+	step3_schoolcity,
+	step3_yearscompleted,
+	step3_graduate,
+	step3_yeargraduated;
 	
 	function _(x) {
 		return document.getElementById(x);
@@ -80,13 +86,17 @@ var step2_tempemploy,
 	}
 
 	function processStep3() {
-		step3_ = _("step3_").value;
+		step3_school = _("step3_School").value;
+		step3_schoolcity = _("step3_SchoolCity").value;
+		step3_yearscompleted = _("step3_YearsCompleted").value;
+		step3_graduate = _("step3_Graduate").value;
+		step3_yeargraduated = _("step3_YearGraduated").value;
 		
-		if( step3_.length > 1 
-			&& step3_.length > 1 
-		  
-		  
-		  ) {
+		if( step3_school.length > 2 
+			&& step3_schoolcity.length > 2 
+			&& step3_yearscompleted.length > 0 
+			&& step3_graduate.length > 1 
+			&& step3_yeargraduated.length > 3 ) {
 			_("ResumeStep3").style.display = "none";
 			_("ResumeStep4").style.display = "block";
 		}
@@ -98,10 +108,14 @@ var step2_tempemploy,
 function back1(){
 	_("ResumeStep1").style.display = "block";
 	_("ResumeStep2").style.display = "none";
+	_("ResumeStep3").style.display = "none";
+	_("ResumeStep4").style.display = "none";
 }
 function back2(){
 	_("ResumeStep2").style.display = "block";
+	_("ResumeStep1").style.display = "none";
 	_("ResumeStep3").style.display = "none";
+	_("ResumeStep4").style.display = "none";
 }
 function submitForm(){
 	_("Resume").method = "post";

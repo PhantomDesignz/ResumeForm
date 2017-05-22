@@ -22,8 +22,6 @@
 
 		<form name="Resume" onSubmit="return false" id="Resume" class="Resume" enctype="multipart/form-data">
 
-
-
 			<div id="ResumeStep1">
 				<h2>Basic Information - Step 1 of 14</h2>
 				<div id="step1_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
@@ -161,31 +159,36 @@
 				<div class="form-group">
 					<label class="control-label" for="step1_Positions">* Positions Applying For:</label>
 					<br>
-					<label  class="control-label" for="step1_Positions">
+					<label class="control-label" for="step1_Positions">
 						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" checked="true" value="General Labourer ">
 						 General Labourer
 					</label>
-					<br>
+				
+				  <br>
 					<label class="control-label" for="step1_Positions">
 						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" value="Certified Trades ">
 						 Certified Trades
 					</label>
-					<br>
-					<label  class="control-label" for="step1_Positions">
+				
+				  <br>
+					<label class="control-label" for="step1_Positions">
 						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" value="Leadership ">
 						 Leadership
 					</label>
-					<br>
+				
+				  <br>
 					<label class="control-label" for="step1_Positions">
 						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions"  value="Forestry ">
 						 Forestry
 					</label>
+				
 					<br>
-					<label class="control-label" class="form-control"  for="step1_Positions">
+					<label class="control-label" class="form-control" for="step1_Positions">
 						<input class="form-control" type="text" name="step1_Positions[]" id="step1_Positions" placeholder="Other">
 					</label>
-					
-				</div>
+				
+
+			  </div>
 
 				<div class="form-group">
 					<label class="control-label" for="step1_Eligible">* Are you eligible to accept long term employment in Canada?   </label><br>
@@ -195,13 +198,15 @@
                     </label>
 				
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step1_Eligible" id="step1_Eligible" value="no">
                                     No
-                                </label>
+                  </label>
 				
 
-				</div>
+
+			  </div>
 				<div class="form-group">
 					<label class="control-label" for="step1_PrevEmployed">* Have you ever been employed by Kalesnikoff Lumber or Kootenay Innovative Wood Products?   </label><br>
 					<label class="radio-inline" for="temp-0">
@@ -210,23 +215,23 @@
                     </label>
 				
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step1_PrevEmployed" id="step1_PrevEmployed" value="no">
                                     No
-                                </label>
-				
-
-				</div>
+                  </label>
 				
 
 
-				<div class="form-group">
+			  </div>
+
+
+
+			  <div class="form-group">
 					<button onClick="processStep1()" class="btn btn-primary">Continue</button>
 				</div>
 
 			</div>
-
-
 
 			<div id="ResumeStep2">
 				<h2>Availability - Step 2 of 14</h2>
@@ -240,11 +245,13 @@
                                 </label>
 				
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_TempEmploy" id="step2_TempEmploy" value="no">
                                     No
                                 </label>
 				
+
 
 				</div>
 				<div class="form-group">
@@ -253,28 +260,32 @@
                                     <input type="radio" name="step2_FullEmploy" id="step2_FullEmploy" value="yes" checked="checked">
                                     Yes
                                 </label>
+				
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_FullEmploy" id="step2_FullEmploy" value="no">
                                     No
                                 </label>
 				
 
+
 				</div>
-				
+
 				<div class="form-group">
 					<label class="control-label" for="step2_Weekends">* Can you work on weekends: </label><br>
 					<label class="radio-inline" for="temp-0">
                                     <input type="radio" name="step2_Weekends" id="step2_Weekends" value="yes" checked="checked">
                                     Yes
                                 </label>
+				
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_Weekends" id="step2_Weekends" value="no">
                                     No
                                 </label>
 				
 
+
 				</div>
-				
+
 				<div class="form-group">
 					<label class="control-label" for="step2_Evenings">* Can you work evenings: </label><br>
 					<label class="radio-inline" for="temp-0">
@@ -283,15 +294,17 @@
                                 </label>
 				
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_Evenings" id="step2_Evenings" value="no">
                                     No
                                 </label>
 				
 
+
 				</div>
-				
-								<div class="form-group">
+
+				<div class="form-group">
 					<label class="control-label" for="step2_Overtime">* Can you work overtime: </label><br>
 					<label class="radio-inline" for="temp-0">
                                     <input type="radio" name="step2_Overtime" id="step2_Overtime" value="yes" checked="checked">
@@ -299,14 +312,16 @@
                                 </label>
 				
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_Overtime" id="step2_Overtime" value="no">
                                     No
                                 </label>
 				
 
+
 				</div>
-								<div class="form-group">
+				<div class="form-group">
 					<label class="control-label" for="step2_ShiftWork">* Can you work shift work: </label><br>
 					<label class="radio-inline" for="temp-0">
                                     <input type="radio" name="step2_ShiftWork" id="step2_ShiftWork" value="yes" checked="checked">
@@ -314,30 +329,67 @@
                                 </label>
 				
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_ShiftWork" id="step2_ShiftWork" value="no">
                                     No
                                 </label>
 				
 
+
 				</div>
-				
+
 
 
 				<div class="form-group">
-					<button onClick="back1()" class="btn btn-primary">Back</button>
+		
 					<button onClick="processStep2()" class="btn btn-primary">Continue</button>
 				</div>
 			</div>
-			
-			<div id="ResumeStep3">
-				<button onClick="back2()" class="btn btn-primary">Back</button>
-				<button onClick="processStep3()" class="btn btn-primary">Continue</button>
+
+		    <div id="ResumeStep3">
+				<h2>Education - Highschool - Step 3 of 14</h2>
+				<div id="step3_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
+
+			  <div class="form-group">
+			    <label class="control-label" for="step3_School">* School Name: </label>
+			    <input type="text" name="step3_School" class="form-control" id="step3_School" placeholder="Enter your School Name">
+				</div>
+				
+			  <div class="form-group">
+			    <label class="control-label" for="step3_SchoolCity">* School City, Province: </label>
+			    <input type="text" name="step3_SchoolCity" class="form-control" id="step3_SchoolCity" placeholder="Enter your Schools Location">
+				</div>
+				
+			<div class="form-group">
+			  <label class="control-label" for="step3_YearsCompleted">* Number of Years Completed: </label>
+				<input type="text" name="step3_YearsCompleted" class="form-control" id="step3_YearsCompleted" placeholder="Enter the amount of years youve completed">
+			  </div>
+				
+				<div class="form-group">
+					<label class="control-label" for="step3_Graduate">* Did You Graduate? </label><br>
+					<label class="radio-inline" for="temp-0">
+                        <input type="radio" name="step3_Graduate" id="step3_Graduate" value="yes" checked="checked">
+                    	Yes
+                    </label>
+					<label class="radio-inline" for="temp-1">
+                         <input type="radio" name="step3_Graduate" id="step3_Graduate" value="no">
+                         No
+                    </label>
+                </div>
+				
+				<div class="form-group">
+					<label class="control-label" for="step3_YearGraduated">* Year Completed: </label>
+					<input name="step3_YearGraduated" type="text" class="form-control" id="step3_YearGraduated" form="Resume" placeholder="Enter the year you graduated">
 			</div>
-			
+
+				<button onClick="processStep3()" class="btn btn-primary">Continue</button>
+		  </div>
+
 			<div id="ResumeStep4">
 				<button onclick="submitForm()" class="btn btn-primary">Submit Data</button>
 			</div>
+			
 		</form>
 	</div>
 	<br>
@@ -345,12 +397,11 @@
 	<br>
 	<!-- jQuery JS -->
 	<script src="includes/js/jquery-3.1.1.min.js"></script>
-	
 	<!-- Bootstrap JS -->
 	<script src="includes/js/bootstrap.min.js"></script>
 	<!-- Form JS -->
 	<script src="includes/js/form.js"></script>
-	
+
 </body>
 
 </html>
