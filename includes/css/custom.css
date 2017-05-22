@@ -9,10 +9,16 @@
 #step2_error {
 	display: none;
 }
+#step3_error {
+	display: none;
+}
 
 #ResumeStep2 {
 		display: none;
 }
 #ResumeStep3 {
+		display: none;
+}
+#ResumeStep4 {
 		display: none;
 }

@@ -25,10 +25,13 @@ $step1_prevemployed = mysqli_real_escape_string($link, $_REQUEST['step1_PrevEmpl
 $step1_positions = mysqli_real_escape_string($link, $_REQUEST['step1_Positions']);
 $step1_positions = implode(',',$_POST['step1_Positions']);
 
-
-// Escape user step1 inputs for security
-
+// Escape user step2 inputs for security
 $step2_tempemploy = mysqli_real_escape_string($link, $_REQUEST['step2_TempEmploy']);
+$step2_fullemploy = mysqli_real_escape_string($link, $_REQUEST['step2_FullEmploy']);
+$step2_overtime = mysqli_real_escape_string($link, $_REQUEST['step2_Overtime']);
+$step2_shiftwork = mysqli_real_escape_string($link, $_REQUEST['step2_ShiftWork']);
+$step2_evenings = mysqli_real_escape_string($link, $_REQUEST['step2_Evenings']);
+$step2_weekends = mysqli_real_escape_string($link, $_REQUEST['step2_Weekends']);
 
 // attempt insert step1 query execution
 $sql = "INSERT INTO resumestep1 (
@@ -64,8 +67,20 @@ step1_Positions
 // attempt insert step2 query execution
 $sql .= "INSERT INTO resumestep2 (
 step2_TempEmploy
+step2_FullEmploy
+step2_Weekends
+step2_Overtime
+step2_Evenings
+step2_ShiftWork
 ) VALUES (
-'$step2_tempemploy');";
+'$step2_tempemploy',
+'$step2_fullemploy',
+'$step2_weekends',
+'$step2_overtime',
+'$step2_evenings',
+'$step2_shiftwork'
+
+);";
 
 
 

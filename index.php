@@ -233,7 +233,7 @@
 				<div id="step2_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
 
 				<div class="form-group">
-					<label class="control-label" for="step2_TempEmploy">* Temporary Employment: </label>
+					<label class="control-label" for="step2_TempEmploy">* Temporary Employment: </label><br>
 					<label class="radio-inline" for="temp-0">
                                     <input type="radio" name="step2_TempEmploy" id="step2_TempEmploy" value="yes" checked="checked">
                                     Yes
@@ -247,18 +247,95 @@
 				
 
 				</div>
+				<div class="form-group">
+					<label class="control-label" for="step2_FullEmploy">* Full Time Employment: </label><br>
+					<label class="radio-inline" for="temp-0">
+                                    <input type="radio" name="step2_FullEmploy" id="step2_FullEmploy" value="yes" checked="checked">
+                                    Yes
+                                </label>
+					<label class="radio-inline" for="temp-1">
+                                    <input type="radio" name="step2_FullEmploy" id="step2_FullEmploy" value="no">
+                                    No
+                                </label>
+				
+
+				</div>
 				
 				<div class="form-group">
-					<label class="control-label" for="positions"> Positions Applying For</label>
+					<label class="control-label" for="step2_Weekends">* Can you work on weekends: </label><br>
+					<label class="radio-inline" for="temp-0">
+                                    <input type="radio" name="step2_Weekends" id="step2_Weekends" value="yes" checked="checked">
+                                    Yes
+                                </label>
+					<label class="radio-inline" for="temp-1">
+                                    <input type="radio" name="step2_Weekends" id="step2_Weekends" value="no">
+                                    No
+                                </label>
+				
 
-					
 				</div>
+				
+				<div class="form-group">
+					<label class="control-label" for="step2_Evenings">* Can you work evenings: </label><br>
+					<label class="radio-inline" for="temp-0">
+                                    <input type="radio" name="step2_Evenings" id="step2_Evenings" value="yes" checked="checked">
+                                    Yes
+                                </label>
+				
+
+					<label class="radio-inline" for="temp-1">
+                                    <input type="radio" name="step2_Evenings" id="step2_Evenings" value="no">
+                                    No
+                                </label>
+				
+
+				</div>
+				
+								<div class="form-group">
+					<label class="control-label" for="step2_Overtime">* Can you work overtime: </label><br>
+					<label class="radio-inline" for="temp-0">
+                                    <input type="radio" name="step2_Overtime" id="step2_Overtime" value="yes" checked="checked">
+                                    Yes
+                                </label>
+				
+
+					<label class="radio-inline" for="temp-1">
+                                    <input type="radio" name="step2_Overtime" id="step2_Overtime" value="no">
+                                    No
+                                </label>
+				
+
+				</div>
+								<div class="form-group">
+					<label class="control-label" for="step2_ShiftWork">* Can you work shift work: </label><br>
+					<label class="radio-inline" for="temp-0">
+                                    <input type="radio" name="step2_ShiftWork" id="step2_ShiftWork" value="yes" checked="checked">
+                                    Yes
+                                </label>
+				
+
+					<label class="radio-inline" for="temp-1">
+                                    <input type="radio" name="step2_ShiftWork" id="step2_ShiftWork" value="no">
+                                    No
+                                </label>
+				
+
+				</div>
+				
+
 
 				<div class="form-group">
+					<button onClick="back1()" class="btn btn-primary">Back</button>
 					<button onClick="processStep2()" class="btn btn-primary">Continue</button>
 				</div>
 			</div>
+			
 			<div id="ResumeStep3">
+				<button onClick="back2()" class="btn btn-primary">Back</button>
+				<button onClick="processStep3()" class="btn btn-primary">Continue</button>
+			</div>
+			
+			<div id="ResumeStep4">
 				<button onclick="submitForm()" class="btn btn-primary">Submit Data</button>
 			</div>
 		</form>
@@ -266,12 +343,14 @@
 	<br>
 	<br>
 	<br>
-	<!-- Form JS -->
-	<script src="includes/js/form.js"></script>
-	<!-- Bootstrap JS -->
-	<script src="includes/js/bootstrap.min.js"></script>
 	<!-- jQuery JS -->
 	<script src="includes/js/jquery-3.1.1.min.js"></script>
+	
+	<!-- Bootstrap JS -->
+	<script src="includes/js/bootstrap.min.js"></script>
+	<!-- Form JS -->
+	<script src="includes/js/form.js"></script>
+	
 </body>
 
 </html>

@@ -10,7 +10,12 @@ var step1_firstname,
 	step1_eligible,
 	step1_prevemployed;
 
-var step2_tempemploy;
+var step2_tempemploy,
+	step2_fullemply,
+	step2_weekends,
+	step2_evenings,
+	step2_shiftwork,
+	step2_overtime;
 	
 	function _(x) {
 		return document.getElementById(x);
@@ -29,10 +34,6 @@ var step2_tempemploy;
 		step1_postal = _("step1_Postal").value;
 		step1_eligible = _("step1_Eligible").value;
 		step1_prevemployed = _("step1_PrevEmployed").value;
-		var step1_positions = document.getElementsByName('step1_Positions[]');
-		var haschecked = false;
-		
-		for (var i=0; i < step1_Positions.length; i++)
 			
 		if(step1_firstname.length > 2 
 		   && step1_lastname.length > 2 
@@ -43,10 +44,7 @@ var step2_tempemploy;
 		   && step1_city.length > 2
 		   && step1_postal.length > 2
 		   && step1_eligible.length > 1
-		   && step1_prevemployed.length > 1
-		   && haschecked === true
-		 
-		  ){
+		   && step1_prevemployed.length > 1){
 			_("ResumeStep1").style.display = "none";
 			_("ResumeStep2").style.display = "block";
 		} 
@@ -55,10 +53,24 @@ var step2_tempemploy;
 			_("step1_error").style.display = "block";
 		}
 	}
+
 	function processStep2() {
 		step2_tempemploy = _("step2_TempEmploy").value;
+		step2_fullemploy = _("step2_FullEmploy").value;
+		step2_weekends = _("step2_Weekends").value;
+		step2_evenings = _("step2_Evenings").value;
+		step2_overtime = _("step2_Overtime").value;
+		step2_shiftwork = _("step2_ShiftWork").value;
 		
-		if( step2_tempemploy.length > 1 ) {
+		if( step2_tempemploy.length > 1 
+			&& step2_fullemploy.length > 1 
+			&& step2_weekends.length > 1 
+			&& step2_evenings.length > 1 
+			&& step2_overtime.length > 1 
+			&& step2_shiftwork.length > 1 
+		  
+		  
+		  ) {
 			_("ResumeStep2").style.display = "none";
 			_("ResumeStep3").style.display = "block";
 		}
@@ -66,6 +78,31 @@ var step2_tempemploy;
 			_("step2_error").style.display = "block";
 		}
 	}
+
+	function processStep3() {
+		step3_ = _("step3_").value;
+		
+		if( step3_.length > 1 
+			&& step3_.length > 1 
+		  
+		  
+		  ) {
+			_("ResumeStep3").style.display = "none";
+			_("ResumeStep4").style.display = "block";
+		}
+		else {
+			_("step3_error").style.display = "block";
+		}
+	}
+
+function back1(){
+	_("ResumeStep1").style.display = "block";
+	_("ResumeStep2").style.display = "none";
+}
+function back2(){
+	_("ResumeStep2").style.display = "block";
+	_("ResumeStep3").style.display = "none";
+}
 function submitForm(){
 	_("Resume").method = "post";
 	_("Resume").action = "submit.php";
