@@ -20,7 +20,7 @@
 		<hr>
 		<p>Required fields are indicated by an asterisk (*).</p><br>
 
-		<form name="Resume" onSubmit="return false" id="Resume" class="Resume">
+		<form name="Resume" onSubmit="return false" id="Resume" class="Resume" enctype="multipart/form-data">
 
 
 
@@ -159,6 +159,68 @@
 				</div>
 
 				<div class="form-group">
+					<label class="control-label" for="step1_Positions">* Positions Applying For:</label>
+					<br>
+					<label  class="control-label" for="step1_Positions">
+						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" checked="true" value="General Labourer ">
+						 General Labourer
+					</label>
+					<br>
+					<label class="control-label" for="step1_Positions">
+						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" value="Certified Trades ">
+						 Certified Trades
+					</label>
+					<br>
+					<label  class="control-label" for="step1_Positions">
+						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" value="Leadership ">
+						 Leadership
+					</label>
+					<br>
+					<label class="control-label" for="step1_Positions">
+						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions"  value="Forestry ">
+						 Forestry
+					</label>
+					<br>
+					<label class="control-label" class="form-control"  for="step1_Positions">
+						<input class="form-control" type="text" name="step1_Positions[]" id="step1_Positions" placeholder="Other">
+					</label>
+					
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step1_Eligible">* Are you eligible to accept long term employment in Canada?   </label><br>
+					<label class="radio-inline" for="temp-0">
+                    	<input type="radio" name="step1_Eligible" id="step1_Eligible" value="yes" checked="checked">
+							Yes
+                    </label>
+				
+
+					<label class="radio-inline" for="temp-1">
+                                    <input type="radio" name="step1_Eligible" id="step1_Eligible" value="no">
+                                    No
+                                </label>
+				
+
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="step1_PrevEmployed">* Have you ever been employed by Kalesnikoff Lumber or Kootenay Innovative Wood Products?   </label><br>
+					<label class="radio-inline" for="temp-0">
+                    	<input type="radio" name="step1_PrevEmployed" id="step1_PrevEmployed" value="yes" checked="checked">
+							Yes
+                    </label>
+				
+
+					<label class="radio-inline" for="temp-1">
+                                    <input type="radio" name="step1_PrevEmployed" id="step1_PrevEmployed" value="no">
+                                    No
+                                </label>
+				
+
+				</div>
+				
+
+
+				<div class="form-group">
 					<button onClick="processStep1()" class="btn btn-primary">Continue</button>
 				</div>
 
@@ -177,11 +239,19 @@
                                     Yes
                                 </label>
 				
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_TempEmploy" id="step2_TempEmploy" value="no">
                                     No
                                 </label>
 				
+
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label" for="positions"> Positions Applying For</label>
+
+					
 				</div>
 
 				<div class="form-group">

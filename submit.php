@@ -20,6 +20,11 @@ $step1_altaddress = mysqli_real_escape_string($link, $_REQUEST['step1_AltAddress
 $step1_provstate = mysqli_real_escape_string($link, $_REQUEST['step1_ProvState']);
 $step1_city = mysqli_real_escape_string($link, $_REQUEST['step1_City']);
 $step1_postal = mysqli_real_escape_string($link, $_REQUEST['step1_Postal']);
+$step1_eligible = mysqli_real_escape_string($link, $_REQUEST['step1_Eligible']);
+$step1_prevemployed = mysqli_real_escape_string($link, $_REQUEST['step1_PrevEmployed']);
+$step1_positions = mysqli_real_escape_string($link, $_REQUEST['step1_Positions']);
+$step1_positions = implode(',',$_POST['step1_Positions']);
+
 
 // Escape user step1 inputs for security
 
@@ -36,7 +41,10 @@ step1_Address,
 step1_AltAddress,
 step1_ProvState,
 step1_City,
-step1_Postal
+step1_Postal,
+step1_Eligible,
+step1_PrevEmployed,
+step1_Positions
 ) VALUES (
 '$step1_first_name', 
 '$step1_last_name', 
@@ -47,7 +55,11 @@ step1_Postal
 '$step1_altaddress',
 '$step1_provstate',
 '$step1_city',
-'$step1_postal');";
+'$step1_postal',
+'$step1_eligible',
+'$step1_prevemployed',
+'$step1_positions'
+);";
 
 // attempt insert step2 query execution
 $sql .= "INSERT INTO resumestep2 (

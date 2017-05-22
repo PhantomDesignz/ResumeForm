@@ -6,7 +6,9 @@ var step1_firstname,
 	step1_address, 
 	step1_provstate,
 	step1_city,
-	step1_postal;
+	step1_postal,
+	step1_eligible,
+	step1_prevemployed;
 
 var step2_tempemploy;
 	
@@ -25,9 +27,13 @@ var step2_tempemploy;
 		step1_provstate = _("step1_ProvState").value;
 		step1_city = _("step1_City").value;
 		step1_postal = _("step1_Postal").value;
+		step1_eligible = _("step1_Eligible").value;
+		step1_prevemployed = _("step1_PrevEmployed").value;
+		var step1_positions = document.getElementsByName('step1_Positions[]');
+		var haschecked = false;
 		
-		
-		
+		for (var i=0; i < step1_Positions.length; i++)
+			
 		if(step1_firstname.length > 2 
 		   && step1_lastname.length > 2 
 		   && step1_phone.length > 9
@@ -36,8 +42,10 @@ var step2_tempemploy;
 		   && step1_provstate.length > 1
 		   && step1_city.length > 2
 		   && step1_postal.length > 2
-		   
-		  
+		   && step1_eligible.length > 1
+		   && step1_prevemployed.length > 1
+		   && haschecked === true
+		 
 		  ){
 			_("ResumeStep1").style.display = "none";
 			_("ResumeStep2").style.display = "block";
