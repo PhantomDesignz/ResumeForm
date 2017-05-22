@@ -1,0 +1,18 @@
+.Resume {
+	border: #000 1px solid;
+	padding: 24px;
+	width: 100%;
+}
+#step1_error {
+	display: none;
+}
+#step2_error {
+	display: none;
+}
+
+#ResumeStep2 {
+		display: none;
+}
+#ResumeStep3 {
+		display: none;
+}
