@@ -18,6 +18,9 @@
 #step5_error {
 	display: none;
 }
+#step6_error {
+    display: none;
+}
 
 #ResumeStep2 {
 		display: none;
@@ -34,5 +37,9 @@
 }
 
 #ResumeStep6 {
+		display: none;
+}
+
+#ResumeStep7 {
 		display: none;
 }

@@ -57,6 +57,9 @@ $step5_certified = mysqli_real_escape_string($link, $_REQUEST['step5_Certified']
 $step5_trade = mysqli_real_escape_string($link, $_REQUEST['step5_Trade']);
 $step5_yeargraduated = mysqli_real_escape_string($link, $_REQUEST['step5_YearGraduated']);
 
+// Escape user step6 inputs for security
+$step6_other = mysqli_real_escape_string($link, $_REQUEST['step6_Other']);
+
 // attempt insert step1 query execution
 $sql = "INSERT INTO resumestep1 (
 step1_FirstName, 
@@ -155,6 +158,14 @@ step5_YearGraduated
 '$step5_trade',
 '$step5_yeargraduated'
 );";
+
+// attempt insert step5 query execution
+$sql .= "INSERT INTO resumestep6 (
+step6_Other
+) VALUES (
+'$step6_other'
+);";
+
 
 if(mysqli_multi_query($link, $sql)){
     echo "<h1> Your Resume has successfully been submitted.</h1>";

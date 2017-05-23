@@ -38,6 +38,8 @@ var step5_school,
 	step5_trade,
 	step5_yeargraduated;
 	
+var step6_other;
+
 	function _(x) {
 		return document.getElementById(x);
 	}
@@ -74,7 +76,6 @@ var step5_school,
 			_("step1_error").style.display = "block";
 		}
 	}
-
 	function processStep2() {
 		step2_tempemploy = _("step2_TempEmploy").value;
 		step2_fullemploy = _("step2_FullEmploy").value;
@@ -99,7 +100,6 @@ var step5_school,
 			_("step2_error").style.display = "block";
 		}
 	}
-
 	function processStep3() {
 		step3_school = _("step3_School").value;
 		step3_schoolcity = _("step3_SchoolCity").value;
@@ -142,7 +142,6 @@ var step5_school,
 			_("step4_error").style.display = "block";
 		}
 	}
-
 	function processStep5() {
 		step5_school = _("step5_School").value;
 		step5_schoolcity = _("step5_SchoolCity").value;
@@ -164,6 +163,12 @@ var step5_school,
 			_("step5_error").style.display = "block";
 		}
 	}
+
+function processStep6() {
+        _("ResumeStep6").style.display = "none";
+        _("ResumeStep7").style.display = "block";        
+}
+
 
 function back1(){
 	_("ResumeStep1").style.display = "block";
