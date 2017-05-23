@@ -164,31 +164,36 @@
 						 General Labourer
 					</label>
 				
-				  <br>
+
+					<br>
 					<label class="control-label" for="step1_Positions">
 						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" value="Certified Trades ">
 						 Certified Trades
 					</label>
 				
-				  <br>
+
+					<br>
 					<label class="control-label" for="step1_Positions">
 						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions" value="Leadership ">
 						 Leadership
 					</label>
 				
-				  <br>
+
+					<br>
 					<label class="control-label" for="step1_Positions">
 						<input type="checkbox" class="checkbox-inline  answer1"  name="step1_Positions[]" id="step1_Positions"  value="Forestry ">
 						 Forestry
 					</label>
 				
+
 					<br>
 					<label class="control-label" class="form-control" for="step1_Positions">
 						<input class="form-control" type="text" name="step1_Positions[]" id="step1_Positions" placeholder="Other">
 					</label>
 				
 
-			  </div>
+
+				</div>
 
 				<div class="form-group">
 					<label class="control-label" for="step1_Eligible">* Are you eligible to accept long term employment in Canada?   </label><br>
@@ -199,6 +204,7 @@
 				
 
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step1_Eligible" id="step1_Eligible" value="no">
                                     No
@@ -206,7 +212,8 @@
 				
 
 
-			  </div>
+
+				</div>
 				<div class="form-group">
 					<label class="control-label" for="step1_PrevEmployed">* Have you ever been employed by Kalesnikoff Lumber or Kootenay Innovative Wood Products?   </label><br>
 					<label class="radio-inline" for="temp-0">
@@ -216,6 +223,7 @@
 				
 
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step1_PrevEmployed" id="step1_PrevEmployed" value="no">
                                     No
@@ -223,11 +231,12 @@
 				
 
 
-			  </div>
+
+				</div>
 
 
 
-			  <div class="form-group">
+				<div class="form-group">
 					<button onClick="processStep1()" class="btn btn-primary">Continue</button>
 				</div>
 
@@ -246,11 +255,13 @@
 				
 
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_TempEmploy" id="step2_TempEmploy" value="no">
                                     No
                                 </label>
 				
+
 
 
 				</div>
@@ -261,11 +272,13 @@
                                     Yes
                                 </label>
 				
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_FullEmploy" id="step2_FullEmploy" value="no">
                                     No
                                 </label>
 				
+
 
 
 				</div>
@@ -277,11 +290,13 @@
                                     Yes
                                 </label>
 				
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_Weekends" id="step2_Weekends" value="no">
                                     No
                                 </label>
 				
+
 
 
 				</div>
@@ -295,11 +310,13 @@
 				
 
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_Evenings" id="step2_Evenings" value="no">
                                     No
                                 </label>
 				
+
 
 
 				</div>
@@ -313,11 +330,13 @@
 				
 
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_Overtime" id="step2_Overtime" value="no">
                                     No
                                 </label>
 				
+
 
 
 				</div>
@@ -330,6 +349,7 @@
 				
 
 
+
 					<label class="radio-inline" for="temp-1">
                                     <input type="radio" name="step2_ShiftWork" id="step2_ShiftWork" value="no">
                                     No
@@ -337,111 +357,162 @@
 				
 
 
+
 				</div>
 
 
 
 				<div class="form-group">
-		
+
 					<button onClick="processStep2()" class="btn btn-primary">Continue</button>
 				</div>
 			</div>
 
-		    <div id="ResumeStep3">
+			<div id="ResumeStep3">
 				<h2>Education - Highschool - Step 3 of 14</h2>
 				<div id="step3_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
 
-			  <div class="form-group">
-			    <label class="control-label" for="step3_School">* School Name: </label>
-			    <input type="text" name="step3_School" class="form-control" id="step3_School" placeholder="Enter your School Name">
+				<div class="form-group">
+					<label class="control-label" for="step3_School">* School Name: </label>
+					<input type="text" name="step3_School" class="form-control" id="step3_School" placeholder="Enter your School Name">
 				</div>
-				
-			  <div class="form-group">
-			    <label class="control-label" for="step3_SchoolCity">* School City, Province: </label>
-			    <input type="text" name="step3_SchoolCity" class="form-control" id="step3_SchoolCity" placeholder="Enter your Schools Location">
+
+				<div class="form-group">
+					<label class="control-label" for="step3_SchoolCity">* School City, Province: </label>
+					<input type="text" name="step3_SchoolCity" class="form-control" id="step3_SchoolCity" placeholder="Enter your Schools Location">
 				</div>
-				
-			<div class="form-group">
-			  <label class="control-label" for="step3_YearsCompleted">* Number of Years Completed: </label>
-				<input type="text" name="step3_YearsCompleted" class="form-control" id="step3_YearsCompleted" placeholder="Enter the amount of years youve completed">
-			  </div>
-				
+
+				<div class="form-group">
+					<label class="control-label" for="step3_YearsCompleted">* Number of Years Completed: </label>
+					<input type="text" name="step3_YearsCompleted" class="form-control" id="step3_YearsCompleted" placeholder="Enter the amount of years youve completed">
+				</div>
+
 				<div class="form-group">
 					<label class="control-label" for="step3_Graduate">* Did You Graduate? </label><br>
 					<label class="radio-inline" for="temp-0">
                         <input type="radio" name="step3_Graduate" id="step3_Graduate" value="yes" checked="checked">
                     	Yes
                     </label>
+				
 					<label class="radio-inline" for="temp-1">
                          <input type="radio" name="step3_Graduate" id="step3_Graduate" value="no">
                          No
                     </label>
-                </div>
 				
+				</div>
+
 				<div class="form-group">
 					<label class="control-label" for="step3_YearGraduated">* Year Completed: </label>
 					<input name="step3_YearGraduated" type="text" class="form-control" id="step3_YearGraduated" form="Resume" placeholder="Enter the year you graduated">
-			</div>
+				</div>
 
 				<button onClick="processStep3()" class="btn btn-primary">Continue</button>
-		  </div>
-		  
-		   <div id="ResumeStep4">
+			</div>
+
+			<div id="ResumeStep4">
 				<h2>Education - University / College - Step 4 of 14</h2>
 				<div id="step4_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
 
-			  <div class="form-group">
-			    <label class="control-label" for="step4_School">* School Name: </label>
-			    <input type="text" name="step4_School" class="form-control" id="step4_School" placeholder="Enter your School Name">
-				</div>
-				
-			  <div class="form-group">
-			    <label class="control-label" for="step4_SchoolCity">* School City, Province: </label>
-			    <input type="text" name="step4_SchoolCity" class="form-control" id="step4_SchoolCity" placeholder="Enter your Schools Location">
-				</div>
-				
-			<div class="form-group">
-			  <label class="control-label" for="step4_YearsCompleted">* Number of Years Completed: </label>
-				<input type="text" name="step4_YearsCompleted" class="form-control" id="step4_YearsCompleted" placeholder="Enter the amount of years youve completed">
-			  </div>
-				
 				<div class="form-group">
-			  <label class="control-label" for="step4_Diploma">Diploma / Degree Earned: </label>
-				<input type="text" name="step4_Diploma" class="form-control" id="step4_Diploma" placeholder="Enter the Diploma or Degree you've earned">
-			  </div>
-				
+					<label class="control-label" for="step4_School">* School Name: </label>
+					<input type="text" name="step4_School" class="form-control" id="step4_School" placeholder="Enter your School Name">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step4_SchoolCity">* School City, Province: </label>
+					<input type="text" name="step4_SchoolCity" class="form-control" id="step4_SchoolCity" placeholder="Enter your Schools Location">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step4_YearsCompleted">* Number of Years Completed: </label>
+					<input type="text" name="step4_YearsCompleted" class="form-control" id="step4_YearsCompleted" placeholder="Enter the amount of years youve completed">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step4_Diploma">Diploma / Degree Earned: </label>
+					<input type="text" name="step4_Diploma" class="form-control" id="step4_Diploma" placeholder="Enter the Diploma or Degree you've earned">
+				</div>
+
 				<div class="form-group">
 					<label class="control-label" for="step4_Graduate">* Did You Graduate? </label><br>
 					<label class="radio-inline" for="temp-0">
                         <input type="radio" name="step4_Graduate" id="step4_Graduate" value="yes" checked="checked">
                     	Yes
                     </label>
+				
 					<label class="radio-inline" for="temp-1">
                          <input type="radio" name="step4_Graduate" id="step4_Graduate" value="no">
                          No
                     </label>
-                </div>
 				
+				</div>
+
 				<div class="form-group">
 					<label class="control-label" for="step4_YearGraduated">* Year Completed: </label>
 					<input name="step4_YearGraduated" type="text" class="form-control" id="step4_YearGraduated" form="Resume" placeholder="Enter the year you graduated">
-			</div>
+				</div>
 				<div class="form-group">
 					<label class="control-label" for="step4_Field">Field of Study: </label>
 					<input name="step4_Field" type="text" class="form-control" id="step4_Field" form="Resume" placeholder="Enter your field of study">
-			</div>
-				
-				
+				</div>
+
+
 
 				<button onClick="processStep4()" class="btn btn-primary">Continue</button>
-		  </div>
-		  
-		  
+			</div>
 
 			<div id="ResumeStep5">
+				<h2>Education - Vocational / Trade School - Step 5 of 14</h2>
+				<div id="step5_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step5_School">* School Name: </label>
+					<input type="text" name="step5_School" class="form-control" id="step5_School" placeholder="Enter your School Name">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step5_SchoolCity">* School City, Province: </label>
+					<input type="text" name="step5_SchoolCity" class="form-control" id="step5_SchoolCity" placeholder="Enter your Schools Location">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step5_YearsCompleted">* Number of Years Completed: </label>
+					<input type="text" name="step5_YearsCompleted" class="form-control" id="step5_YearsCompleted" placeholder="Enter the amount of years youve completed">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step5_Trade">Trade: </label>
+					<input type="text" name="step5_Trade" class="form-control" id="step5_Trade" placeholder="Enter the Diploma or Degree you've earned">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step5_Certified">* Are You Certified? </label><br>
+					<label class="radio-inline" for="temp-0">
+                        <input type="radio" name="step5_Certified" id="step5_Certified" value="yes" checked="checked">
+                    	Yes
+                    </label>
+				
+					<label class="radio-inline" for="temp-1">
+                         <input type="radio" name="step5_Certified" id="step5_Certified" value="no">
+                         No
+                    </label>
+				
+				</div>
+
+				<div class="form-group">
+					<label class="control-label" for="step5_YearGraduated">* Year Completed: </label>
+					<input name="step5_YearGraduated" type="text" class="form-control" id="step5_YearGraduated" form="Resume" placeholder="Enter the year you graduated">
+				</div>
+
+
+
+				<button onClick="processStep5()" class="btn btn-primary">Continue</button>
+			</div>
+
+			<div id="ResumeStep6">
 				<button onclick="submitForm()" class="btn btn-primary">Submit Data</button>
 			</div>
-			
+
 		</form>
 	</div>
 	<br>

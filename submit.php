@@ -53,7 +53,8 @@ $step4_yeargraduated = mysqli_real_escape_string($link, $_REQUEST['step4_YearGra
 $step5_school = mysqli_real_escape_string($link, $_REQUEST['step5_School']);
 $step5_schoolcity = mysqli_real_escape_string($link, $_REQUEST['step5_SchoolCity']);
 $step5_yearscompleted = mysqli_real_escape_string($link, $_REQUEST['step5_YearsCompleted']);
-$step5_graduate = mysqli_real_escape_string($link, $_REQUEST['step5_Graduate']);
+$step5_certified = mysqli_real_escape_string($link, $_REQUEST['step5_Certified']);
+$step5_trade = mysqli_real_escape_string($link, $_REQUEST['step5_Trade']);
 $step5_yeargraduated = mysqli_real_escape_string($link, $_REQUEST['step5_YearGraduated']);
 
 // attempt insert step1 query execution
@@ -143,13 +144,15 @@ $sql .= "INSERT INTO resumestep5 (
 step5_School,
 step5_SchoolCity,
 step5_YearsCompleted,
-step5_Graduate,
+step5_Certified,
+step5_Trade,
 step5_YearGraduated
 ) VALUES (
 '$step5_school',
 '$step5_schoolcity',
 '$step5_yearscompleted',
-'$step5_graduate',
+'$step5_certified',
+'$step5_trade',
 '$step5_yeargraduated'
 );";
 

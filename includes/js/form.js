@@ -35,6 +35,7 @@ var step5_school,
 	step5_schoolcity,
 	step5_yearscompleted,
 	step5_graduate,
+	step5_trade,
 	step5_yeargraduated;
 	
 	function _(x) {
@@ -142,20 +143,22 @@ var step5_school,
 		}
 	}
 
-	function processstep5() {
+	function processStep5() {
 		step5_school = _("step5_School").value;
 		step5_schoolcity = _("step5_SchoolCity").value;
 		step5_yearscompleted = _("step5_YearsCompleted").value;
-		step5_graduate = _("step5_Graduate").value;
+		step5_certified = _("step5_Certified").value;
+		step5_trade = _("step5_Trade").value;
 		step5_yeargraduated = _("step5_YearGraduated").value;
 		
 		if( step5_school.length > 2 
 			&& step5_schoolcity.length > 2 
 			&& step5_yearscompleted.length > 0 
-			&& step5_graduate.length > 1 
+			&& step5_certified.length > 1 
+			&& step5_trade.length > 1 
 			&& step5_yeargraduated.length > 3 ) {
-			_("Resumestep5").style.display = "none";
-			_("Resumestep6").style.display = "block";
+			_("ResumeStep5").style.display = "none";
+			_("ResumeStep6").style.display = "block";
 		}
 		else {
 			_("step5_error").style.display = "block";
