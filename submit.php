@@ -60,6 +60,20 @@ $step5_yeargraduated = mysqli_real_escape_string($link, $_REQUEST['step5_YearGra
 // Escape user step6 inputs for security
 $step6_other = mysqli_real_escape_string($link, $_REQUEST['step6_Other']);
 
+// Escape user step7 inputs for security
+$step7_businesstype = mysqli_real_escape_string($link, $_REQUEST['step7_BusinessType']);
+$step7_city = mysqli_real_escape_string($link, $_REQUEST['step7_City']);
+$step7_contactcurrent = mysqli_real_escape_string($link, $_REQUEST['step7_ContactCurrent']);
+$step7_duties = mysqli_real_escape_string($link, $_REQUEST['step7_Duties']);
+$step7_employed = mysqli_real_escape_string($link, $_REQUEST['step7_Employed']);
+$step7_employername = mysqli_real_escape_string($link, $_REQUEST['step7_EmployerName']);
+$step7_end = mysqli_real_escape_string($link, $_REQUEST['step7_End']);
+$step7_leavingreason = mysqli_real_escape_string($link, $_REQUEST['step7_LeavingReason']);
+$step7_phone = mysqli_real_escape_string($link, $_REQUEST['step7_Phone']);
+$step7_province = mysqli_real_escape_string($link, $_REQUEST['step7_Province']);
+$step7_start = mysqli_real_escape_string($link, $_REQUEST['step7_Start']);
+$step7_supervisor = mysqli_real_escape_string($link, $_REQUEST['step7_Supervisor']);
+
 // attempt insert step1 query execution
 $sql = "INSERT INTO resumestep1 (
 step1_FirstName, 
@@ -159,10 +173,39 @@ step5_YearGraduated
 '$step5_yeargraduated'
 );";
 
-// attempt insert step5 query execution
+// attempt insert step6 query execution
 $sql .= "INSERT INTO resumestep6 (
 step6_Other
 ) VALUES (
+'$step6_other'
+);";
+
+// attempt insert step7 query execution
+$sql .= "INSERT INTO resumestep7 (
+step7_BusinessType,
+step7_City,
+step7_ContactCurrent,
+step7_Duties,
+step7_Employed,
+step7_EmployerName,
+step7_End,
+step7_LeavingReason,
+step7_Phone,
+step7_Province,
+step7_Start,
+step7_Supervisor
+) VALUES (
+'$step7_businesstype',
+'$step7_city',
+'$step7_contactcurrent',
+'$step7_duties',
+'$step7_employed',
+'$step6_other',
+'$step6_other',
+'$step6_other',
+'$step6_other',
+'$step6_other',
+'$step6_other',
 '$step6_other'
 );";
 

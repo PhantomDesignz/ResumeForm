@@ -21,6 +21,9 @@
 #step6_error {
     display: none;
 }
+#step7_error {
+    display: none;
+}
 
 #ResumeStep2 {
 		display: none;
@@ -41,5 +44,9 @@
 }
 
 #ResumeStep7 {
+		display: none;
+}
+
+#ResumeStep12 {
 		display: none;
 }

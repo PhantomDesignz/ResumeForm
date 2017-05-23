@@ -40,6 +40,19 @@ var step5_school,
 	
 var step6_other;
 
+var step7_businesstype,
+	step7_city,
+	step7_contactcurrent,
+	step7_duties,
+	step7_employed,
+	step7_employername,
+	step7_end,
+	step7_leavingreason,
+	step7_phone,
+	step7_province,
+	step7_start,
+	step7_supervisor;
+
 	function _(x) {
 		return document.getElementById(x);
 	}
@@ -167,6 +180,42 @@ var step6_other;
 function processStep6() {
         _("ResumeStep6").style.display = "none";
         _("ResumeStep7").style.display = "block";        
+}
+
+function processStep7() {
+	step7_businesstype = _("step7_BusinessType").value;
+	step7_city = _("step7_City").value;
+	step7_contactcurrent = _("step7_ContactCurrent").value;
+	step7_duties = _("step7_Duties").value;
+	step7_employed = _("step7_Employed").value;
+	step7_employername = _("step7_EmployerName").value;
+	step7_end = _("step7_End").value;
+	step7_leavingreason = _("step7_LeavingReason").value;
+	step7_phone = _("step7_Phone").value;
+	step7_province = _("step7_Province").value;
+	step7_start = _("step7_Start").value;
+	step7_supervisor = _("step7_Supervisor").value;
+	
+		
+		if( step7_businesstype.length > 2
+		  && step7_city.length > 2
+		   && step7_contactcurrent.length > 2
+		   && step7_duties.length > 2
+		   && step7_employed.length > 2
+		   && step7_employername.length > 2
+		   && step7_end.length > 2
+		   && step7_leavingreason.length > 2
+		   && step7_phone.length > 9
+		   && step7_province.length > 1
+		   && step7_start.length > 2
+		   && step7_supervisor.length > 2
+		  ) {
+			_("ResumeStep7").style.display = "none";
+			_("ResumeStep12").style.display = "block";
+		}
+		else {
+			_("step7_error").style.display = "block";
+		}
 }
 
 
