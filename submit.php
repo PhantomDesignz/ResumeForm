@@ -33,12 +33,28 @@ $step2_shiftwork = mysqli_real_escape_string($link, $_REQUEST['step2_ShiftWork']
 $step2_evenings = mysqli_real_escape_string($link, $_REQUEST['step2_Evenings']);
 $step2_weekends = mysqli_real_escape_string($link, $_REQUEST['step2_Weekends']);
 
-// Escape user step2 inputs for security
+// Escape user step3 inputs for security
 $step3_school = mysqli_real_escape_string($link, $_REQUEST['step3_School']);
 $step3_schoolcity = mysqli_real_escape_string($link, $_REQUEST['step3_SchoolCity']);
 $step3_yearscompleted = mysqli_real_escape_string($link, $_REQUEST['step3_YearsCompleted']);
 $step3_graduate = mysqli_real_escape_string($link, $_REQUEST['step3_Graduate']);
 $step3_yeargraduated = mysqli_real_escape_string($link, $_REQUEST['step3_YearGraduated']);
+
+// Escape user step4 inputs for security
+$step4_school = mysqli_real_escape_string($link, $_REQUEST['step4_School']);
+$step4_schoolcity = mysqli_real_escape_string($link, $_REQUEST['step4_SchoolCity']);
+$step4_yearscompleted = mysqli_real_escape_string($link, $_REQUEST['step4_YearsCompleted']);
+$step4_graduate = mysqli_real_escape_string($link, $_REQUEST['step4_Graduate']);
+$step4_diploma = mysqli_real_escape_string($link, $_REQUEST['step4_Diploma']);
+$step4_field = mysqli_real_escape_string($link, $_REQUEST['step4_Field']);
+$step4_yeargraduated = mysqli_real_escape_string($link, $_REQUEST['step4_YearGraduated']);
+
+// Escape user step5 inputs for security
+$step5_school = mysqli_real_escape_string($link, $_REQUEST['step5_School']);
+$step5_schoolcity = mysqli_real_escape_string($link, $_REQUEST['step5_SchoolCity']);
+$step5_yearscompleted = mysqli_real_escape_string($link, $_REQUEST['step5_YearsCompleted']);
+$step5_graduate = mysqli_real_escape_string($link, $_REQUEST['step5_Graduate']);
+$step5_yeargraduated = mysqli_real_escape_string($link, $_REQUEST['step5_YearGraduated']);
 
 // attempt insert step1 query execution
 $sql = "INSERT INTO resumestep1 (
@@ -88,7 +104,7 @@ step2_ShiftWork
 '$step2_shiftwork'
 );";
 
-// attempt insert step2 query execution
+// attempt insert step3 query execution
 $sql .= "INSERT INTO resumestep3 (
 step3_School,
 step3_SchoolCity,
@@ -103,6 +119,39 @@ step3_YearGraduated
 '$step3_yeargraduated'
 );";
 
+// attempt insert step4 query execution
+$sql .= "INSERT INTO resumestep4 (
+step4_School,
+step4_SchoolCity,
+step4_YearsCompleted,
+step4_Graduate,
+step4_Diploma,
+step4_Field,
+step4_YearGraduated
+) VALUES (
+'$step4_school',
+'$step4_schoolcity',
+'$step4_yearscompleted',
+'$step4_graduate',
+'$step4_diploma',
+'$step4_field',
+'$step4_yeargraduated'
+);";
+
+// attempt insert step5 query execution
+$sql .= "INSERT INTO resumestep5 (
+step5_School,
+step5_SchoolCity,
+step5_YearsCompleted,
+step5_Graduate,
+step5_YearGraduated
+) VALUES (
+'$step5_school',
+'$step5_schoolcity',
+'$step5_yearscompleted',
+'$step5_graduate',
+'$step5_yeargraduated'
+);";
 
 if(mysqli_multi_query($link, $sql)){
     echo "<h1> Your Resume has successfully been submitted.</h1>";

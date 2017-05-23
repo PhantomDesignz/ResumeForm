@@ -22,6 +22,20 @@ var step3_school,
 	step3_yearscompleted,
 	step3_graduate,
 	step3_yeargraduated;
+
+var step4_school,
+	step4_schoolcity,
+	step4_yearscompleted,
+	step4_graduate,
+	step4_diploma,
+	step4_field,
+	step4_yeargraduated;
+
+var step5_school,
+	step5_schoolcity,
+	step5_yearscompleted,
+	step5_graduate,
+	step5_yeargraduated;
 	
 	function _(x) {
 		return document.getElementById(x);
@@ -102,6 +116,49 @@ var step3_school,
 		}
 		else {
 			_("step3_error").style.display = "block";
+		}
+	}
+	function processStep4() {
+		step4_school = _("step4_School").value;
+		step4_schoolcity = _("step4_SchoolCity").value;
+		step4_yearscompleted = _("step4_YearsCompleted").value;
+		step4_graduate = _("step4_Graduate").value;
+		step4_field = _("step4_Field").value;
+		step4_diploma = _("step4_Diploma").value;
+		step4_yeargraduated = _("step4_YearGraduated").value;
+		
+		if( step4_school.length > 2 
+			&& step4_schoolcity.length > 2 
+			&& step4_yearscompleted.length > 0 
+			&& step4_graduate.length > 1 
+			&& step4_field.length > 1 
+			&& step4_diploma.length > 1 
+			&& step4_yeargraduated.length > 3 ) {
+			_("ResumeStep4").style.display = "none";
+			_("ResumeStep5").style.display = "block";
+		}
+		else {
+			_("step4_error").style.display = "block";
+		}
+	}
+
+	function processstep5() {
+		step5_school = _("step5_School").value;
+		step5_schoolcity = _("step5_SchoolCity").value;
+		step5_yearscompleted = _("step5_YearsCompleted").value;
+		step5_graduate = _("step5_Graduate").value;
+		step5_yeargraduated = _("step5_YearGraduated").value;
+		
+		if( step5_school.length > 2 
+			&& step5_schoolcity.length > 2 
+			&& step5_yearscompleted.length > 0 
+			&& step5_graduate.length > 1 
+			&& step5_yeargraduated.length > 3 ) {
+			_("Resumestep5").style.display = "none";
+			_("Resumestep6").style.display = "block";
+		}
+		else {
+			_("step5_error").style.display = "block";
 		}
 	}
 

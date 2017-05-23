@@ -12,6 +12,12 @@
 #step3_error {
 	display: none;
 }
+#step4_error {
+	display: none;
+}
+#step5_error {
+	display: none;
+}
 
 #ResumeStep2 {
 		display: none;
@@ -20,5 +26,13 @@
 		display: none;
 }
 #ResumeStep4 {
+		display: none;
+}
+
+#ResumeStep5 {
+		display: none;
+}
+
+#ResumeStep6 {
 		display: none;
 }

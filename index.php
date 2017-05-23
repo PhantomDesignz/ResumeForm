@@ -385,8 +385,60 @@
 
 				<button onClick="processStep3()" class="btn btn-primary">Continue</button>
 		  </div>
+		  
+		   <div id="ResumeStep4">
+				<h2>Education - University / College - Step 4 of 14</h2>
+				<div id="step4_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
 
-			<div id="ResumeStep4">
+			  <div class="form-group">
+			    <label class="control-label" for="step4_School">* School Name: </label>
+			    <input type="text" name="step4_School" class="form-control" id="step4_School" placeholder="Enter your School Name">
+				</div>
+				
+			  <div class="form-group">
+			    <label class="control-label" for="step4_SchoolCity">* School City, Province: </label>
+			    <input type="text" name="step4_SchoolCity" class="form-control" id="step4_SchoolCity" placeholder="Enter your Schools Location">
+				</div>
+				
+			<div class="form-group">
+			  <label class="control-label" for="step4_YearsCompleted">* Number of Years Completed: </label>
+				<input type="text" name="step4_YearsCompleted" class="form-control" id="step4_YearsCompleted" placeholder="Enter the amount of years youve completed">
+			  </div>
+				
+				<div class="form-group">
+			  <label class="control-label" for="step4_Diploma">Diploma / Degree Earned: </label>
+				<input type="text" name="step4_Diploma" class="form-control" id="step4_Diploma" placeholder="Enter the Diploma or Degree you've earned">
+			  </div>
+				
+				<div class="form-group">
+					<label class="control-label" for="step4_Graduate">* Did You Graduate? </label><br>
+					<label class="radio-inline" for="temp-0">
+                        <input type="radio" name="step4_Graduate" id="step4_Graduate" value="yes" checked="checked">
+                    	Yes
+                    </label>
+					<label class="radio-inline" for="temp-1">
+                         <input type="radio" name="step4_Graduate" id="step4_Graduate" value="no">
+                         No
+                    </label>
+                </div>
+				
+				<div class="form-group">
+					<label class="control-label" for="step4_YearGraduated">* Year Completed: </label>
+					<input name="step4_YearGraduated" type="text" class="form-control" id="step4_YearGraduated" form="Resume" placeholder="Enter the year you graduated">
+			</div>
+				<div class="form-group">
+					<label class="control-label" for="step4_Field">Field of Study: </label>
+					<input name="step4_Field" type="text" class="form-control" id="step4_Field" form="Resume" placeholder="Enter your field of study">
+			</div>
+				
+				
+
+				<button onClick="processStep4()" class="btn btn-primary">Continue</button>
+		  </div>
+		  
+		  
+
+			<div id="ResumeStep5">
 				<button onclick="submitForm()" class="btn btn-primary">Submit Data</button>
 			</div>
 			
