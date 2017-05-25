@@ -513,12 +513,9 @@ Even if you have attached a resume, this section must be completed.</p>
                   <input name="step7_End"  class="form-control" id="step7_End" placeholder="Enter your end date">
                </div>
                <p>List the jobs you held, duties performed, skills used or learned, advancements or promotions while you worked at this company:</p>
-               <textarea class="form-control" id="step7_Duties" name="step7_Duties">
-                </textarea><br>
+               <textarea class="form-control" id="step7_Duties" name="step7_Duties"></textarea><br>
                <p>What was your reason for leaving this company?</p>
-               <textarea class="form-control" id="step7_LeavingReason" name="step7_LeavingReason">
-                </textarea><br>
-                <br>
+               <textarea class="form-control" id="step7_LeavingReason" name="step7_LeavingReason"></textarea><br>
                <button onClick="processStep7()" class="btn btn-primary">Continue</button>
             </div>
             <div id="ResumeStep8">
