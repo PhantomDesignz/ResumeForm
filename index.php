@@ -428,8 +428,8 @@ Even if you have attached a resume, this section must be completed.</p>
                   <input name="step7_City" class="form-control" id="step7_City" placeholder="Enter the city">
                </div>
                <div class="form-group">
-                  <label class="control-label required" for="step7_Province">* Province / State</label>
-                  <select id="step7_Province" name="step7_Province" class="form-control" required>
+                  <label class="control-label" for="step7_Province">* Province / State</label>
+                  <select id="step7_Province" name="step7_Province" class="form-control">
                      <option value="">Choose one..</option>
                      <optgroup label="Canada">
                         <option id="CAN-AB" value="AB">Alberta (AB)</option>
