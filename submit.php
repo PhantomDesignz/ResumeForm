@@ -246,7 +246,7 @@ step8_HobbiesInterests
 );";
 
 // attempt insert step9 query execution
-$sql .= "INSERT INTO resumestep6 (
+$sql .= "INSERT INTO resumestep9 (
 step9_Name1,
 step9_Name2,
 step9_Name3,
