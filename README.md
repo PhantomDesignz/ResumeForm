@@ -2,4 +2,4 @@
 
 The Resume Form
 
-Made with jQuery / Javascript / PHP / MySQL
+Made with HTML5 / CSS3 / jQuery / Javascript / PHP / MySQL
