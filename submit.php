@@ -74,6 +74,23 @@ $step7_province = mysqli_real_escape_string($link, $_REQUEST['step7_Province']);
 $step7_start = mysqli_real_escape_string($link, $_REQUEST['step7_Start']);
 $step7_supervisor = mysqli_real_escape_string($link, $_REQUEST['step7_Supervisor']);
 
+// Escape user step8 inputs for security
+$step8_able = mysqli_real_escape_string($link, $_REQUEST['step8_Able']);
+$step8_injuries = mysqli_real_escape_string($link, $_REQUEST['step8_Injuries']);
+$step8_additionalinfo = mysqli_real_escape_string($link, $_REQUEST['step8_AdditionalInfo']);
+$step8_hobbiesinterests = mysqli_real_escape_string($link, $_REQUEST['step8_HobbiesInterests']);
+
+// Escape user step6 inputs for security
+$step9_name1 = mysqli_real_escape_string($link, $_REQUEST['step9_Name1']);
+$step9_name2 = mysqli_real_escape_string($link, $_REQUEST['step9_Name2']);
+$step9_name3 = mysqli_real_escape_string($link, $_REQUEST['step9_Name3']);
+$step9_rel1 = mysqli_real_escape_string($link, $_REQUEST['step9_Rel1']);
+$step9_rel2 = mysqli_real_escape_string($link, $_REQUEST['step9_Rel2']);
+$step9_rel3 = mysqli_real_escape_string($link, $_REQUEST['step9_Rel3']);
+$step9_phone1 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone1']);
+$step9_phone2 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone2']);
+$step9_phone3 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone3']);
+
 // attempt insert step1 query execution
 $sql = "INSERT INTO resumestep1 (
 step1_FirstName, 
@@ -209,6 +226,41 @@ step7_Supervisor
 '$step6_other'
 );";
 
+// attempt insert step8 query execution
+$sql .= "INSERT INTO resumestep8 (
+step8_Able,
+step8_Injuries,
+step8_AdditionalInfo,
+step8_HobbiesInterests
+) VALUES (
+'$step8_able',
+'$step8_injuries',
+'$step8_additionalinfo',
+'$step8_hobbiesinterests'
+);";
+
+// attempt insert step9 query execution
+$sql .= "INSERT INTO resumestep9 (
+step9_Name1,
+step9_Name2,
+step9_Name3,
+step9_Phone1,
+step9_Phone2,
+step9_Phone3,
+step9_Rel1,
+step9_Rel2,
+step9_Rel3
+) VALUES (
+'$step9_name1',
+'$step9_name2',
+'$step9_name3',
+'$step9_phone1',
+'$step9_phone2',
+'$step9_phone3',
+'$step9_rel1',
+'$step9_rel2',
+'$step9_rel3'
+);";
 
 if(mysqli_multi_query($link, $sql)){
     echo "<h1> Your Resume has successfully been submitted.</h1>";

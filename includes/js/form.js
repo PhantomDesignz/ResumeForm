@@ -53,6 +53,21 @@ var step7_businesstype,
 	step7_start,
 	step7_supervisor;
 
+var step8_able,
+	step8_injuries,
+	step8_additionalinfo,
+	step8_hobbiesinterests;
+
+var step9_name1,
+	step9_name2,
+	step9_name3,
+	step9_phone1,
+	step9_phone2,
+	step9_phone3,
+	step9_rel1,
+	step9_rel2,
+	step9_rel3;
+
 	function _(x) {
 		return document.getElementById(x);
 	}
@@ -176,11 +191,10 @@ var step7_businesstype,
 			_("step5_error").style.display = "block";
 		}
 	}
-
-function processStep6() {
+	function processStep6() {
         _("ResumeStep6").style.display = "none";
         _("ResumeStep7").style.display = "block";        
-}
+	}
 
 function processStep7() {
 	step7_businesstype = _("step7_BusinessType").value;
@@ -211,13 +225,61 @@ function processStep7() {
 		   && step7_supervisor.length > 2
 		  ) {
 			_("ResumeStep7").style.display = "none";
-			_("ResumeStep12").style.display = "block";
+			_("ResumeStep8").style.display = "block";
 		}
 		else {
 			_("step7_error").style.display = "block";
 		}
 }
 
+function processStep8() {
+	step8_able = _("step8_Able").value;
+	step8_injuries = _("step8_Injuries").value;
+	step8_additionalinfo = _("step8_AdditionalInfo").value;
+	step8_hobbiesinterests = _("step8_HobbiesInterests").value;
+	
+	if( step8_able.length > 1
+	    && step8_injuries.length > 1
+	    && step8_additionalinfo.length > 2
+	    && step8_hobbiesinterests.length > 2
+		  ) {
+			_("ResumeStep8").style.display = "none";
+			_("ResumeStep9").style.display = "block";
+		}
+		else {
+			_("step8_error").style.display = "block";
+		}
+}
+
+function processStep9() {
+	step9_name1 = _("step9_Name1").value;
+	step9_name2 = _("step9_Name2").value;
+	step9_name3 = _("step9_Name3").value;
+	step9_phone1 = _("step9_Phone1").value;
+	step9_phone2 = _("step9_Phone2").value;
+	step9_phone3 = _("step9_Phone3").value;
+	step9_rel1 = _("step9_Rel1").value;
+	step9_rel2 = _("step9_Rel2").value;
+	step9_rel3 = _("step9_Rel3").value;
+	
+	
+	if( step9_name1.length > 2
+	    && step9_name2.length > 2
+	    && step9_name3.length > 2
+	    && step9_phone1.length > 9
+	    && step9_phone2.length > 9
+	    && step9_phone3.length > 9
+	    && step9_rel1.length > 2
+	    && step9_rel2.length > 2
+	    && step9_rel3.length > 2
+		  ) {
+			_("ResumeStep9").style.display = "none";
+			_("ResumeStep10").style.display = "block";
+		}
+		else {
+			_("step9_error").style.display = "block";
+		}
+}
 
 function back1(){
 	_("ResumeStep1").style.display = "block";

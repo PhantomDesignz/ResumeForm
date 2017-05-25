@@ -524,7 +524,94 @@ Even if you have attached a resume, this section must be completed.</p>
                 </textarea>
                <button onClick="processStep7()" class="btn btn-primary">Continue</button>
             </div>
+            <div id="ResumeStep8">
+            	<h2>Additional Information - Step 8 of 14</h2>
+            	<div id="step8_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
+            	<p>For the entry level position you must be able to pile, throw, lift and/or pull heavy (50 - 75 pounds plus) boards and other objects, which may be on the ground or above your head or anywhere in between, without injuring yourself or aggravating old injuries or any of your current physical limitations.</p>
+            	<div class="form-group">
+                  <label class="control-label" for="step8_Able">* Are you able to do this: </label><br>
+                  <label class="radio-inline" for="temp-0">
+                  <input type="radio" name="step8_Able" id="step8_Able" value="yes" checked="checked">
+                  Yes
+                  </label>
+                  <label class="radio-inline" for="temp-1">
+                  <input type="radio" name="step8_Able" id="step8_Able" value="no">
+                  No
+                  </label>
+               </div>
+               <div class="form-group">
+                  <label class="control-label" for="step8_Injuries">* Do you have any such old injuries or physical limitations: </label><br>
+                  <label class="radio-inline" for="temp-0">
+                  <input type="radio" name="step8_Injuries" id="step8_Injuries" value="yes" checked="checked">
+                  Yes
+                  </label>
+                  <label class="radio-inline" for="temp-1">
+                  <input type="radio" name="step8_Injuries" id="step8_Injuries" value="no">
+                  No
+                  </label>
+               </div>
+               <p>An application form sometimes makes it difficult for an individual to adequately summarize a complete background. Use the space below to summarize any additional information necessary to describe your full qualifications for the specific position for which you are applying.</p>
+               <textarea class="form-control" id="step8_AdditionalInfo" name="step8_AdditionalInfo"></textarea><br>
+               <p>Help us get to know you a little better by telling us what you enjoy doing when not at work. What makes it enjoyable for you? (Sometimes these skills are beneficial in a work environment.)</p>
+               <textarea class="form-control" id="step8_HobbiesInterests" name="step8_HobbiesInterests"></textarea><br>
+               <button onclick="processStep8()" class="btn btn-primary">Continue</button>
+            </div>
+            <div id="ResumeStep9">
+            	<h2>References - Step 9 of 14</h2>
+            	<div id="step9_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
+               <p>List three persons who have knowledge of your work performance within the last five years. Please include professional references only.</p>
+               <h2>First Reference:</h2>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Name1">* Name (First and Last): </label>
+                   <input name="step9_Name1"class="form-control" id="step9_Name1" placeholder="">
+                </div>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Phone1">* Telephone Number: </label>
+                   <input name="step9_Phone1"class="form-control" id="step9_Phone1" placeholder="">
+                </div>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Rel1">* Relationship: </label>
+                   <input name="step9_Rel1"class="form-control" id="step9_Rel1" placeholder="">
+                </div>
+               <h2>Second Reference:</h2>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Name1">* Name (First and Last): </label>
+                   <input name="step9_Name2"class="form-control" id="step9_Name2" placeholder="">
+                </div>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Phone2">* Telephone Number: </label>
+                   <input name="step9_Phone2"class="form-control" id="step9_Phone2" placeholder="">
+                </div>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Rel2">* Relationship: </label>
+                   <input name="step9_Rel2"class="form-control" id="step9_Rel2" placeholder="">
+                </div>
+               <h2>Third Reference:</h2>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Name3">* Name (First and Last): </label>
+                   <input name="step9_Name3"class="form-control" id="step9_Name3" placeholder="">
+                </div>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Phone3">* Telephone Number: </label>
+                   <input name="step9_Phone3"class="form-control" id="step9_Phone3" placeholder="">
+                </div>
+                <div class="form-group">
+                   <label class="control-label" for="step9_Rel3">* Relationship: </label>
+                   <input name="step9_Rel3"class="form-control" id="step9_Rel3" placeholder="">
+                </div>
+                 <button onclick="processStep9()" class="btn btn-primary">Continue</button>
+            </div>
+            <div id="ResumeStep10">
+            	<h2>Resume - Step 10 of 14</h2>
+            	<div id="step10_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
+            	<p>Your resume is required to complete the application process. Please upload it here.</p>
+            	<input name="step10_File" type="file" id="step10_File"><br>
+            	<button onclick="processStep10()" class="btn btn-primary">Continue</button>
+            </div>
+            
+            
             <div id="ResumeStep12">
+              
                <button onclick="submitForm()" class="btn btn-primary">Submit Data</button>
             </div>
          </form>

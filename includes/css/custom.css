@@ -24,6 +24,15 @@
 #step7_error {
     display: none;
 }
+#step8_error {
+    display: none;
+}
+#step9_error {
+    display: none;
+}
+#step10_error {
+    display: none;
+}
 
 #ResumeStep2 {
 		display: none;
@@ -44,6 +53,15 @@
 }
 
 #ResumeStep7 {
+		display: none;
+}
+#ResumeStep8 {
+		display: none;
+}
+#ResumeStep9 {
+		display: none;
+}
+#ResumeStep10 {
 		display: none;
 }
 
