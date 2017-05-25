@@ -192,6 +192,8 @@ var step9_name1,
 		}
 	}
 	function processStep6() {
+		step6_other = _("step6_Other").value;
+		
         _("ResumeStep6").style.display = "none";
         _("ResumeStep7").style.display = "block";        
 	}

@@ -223,13 +223,13 @@ step7_Supervisor
 '$step7_contactcurrent',
 '$step7_duties',
 '$step7_employed',
-'$step6_other',
-'$step6_other',
-'$step6_other',
-'$step6_other',
-'$step6_other',
-'$step6_other',
-'$step6_other'
+'$step7_employername',
+'$step7_end',
+'$step7_leavingreason',
+'$step7_phone',
+'$step7_province',
+'$step7_start',
+'$step7_supervisor'
 );";
 
 // attempt insert step8 query execution
@@ -246,7 +246,7 @@ step8_HobbiesInterests
 );";
 
 // attempt insert step9 query execution
-$sql .= "INSERT INTO resumestep9 (
+$sql .= "INSERT INTO resumestep6 (
 step9_Name1,
 step9_Name2,
 step9_Name3,
@@ -270,7 +270,7 @@ step9_Rel3
 
 // Upload Resume
 
-if(isset($_POST['Resume']) && $_FILES['step10_File']['size'] > 0)
+ if(isset($_POST['Resume']) && $_FILES['step10_File']['size'] > 0)
 {
 $fileName = $_FILES['step10_File']['name'];
 $tmpName  = $_FILES['step10_File']['tmp_name'];
@@ -305,6 +305,7 @@ if(mysqli_multi_query($link, $sql)){
     echo "<h1> Your Resume has successfully been submitted.</h1>";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+	
 }
  
 // close connection

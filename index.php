@@ -372,9 +372,7 @@
                <h2>Other Training - Step 6 of 14</h2>
                <div id="step6_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
                <p>What other training, qualifications or skills do you have that should be brought to our attention? For example: First Aid ticket, Grading ticket, Class 1 Driver's license or Management training.</p>
-               <textarea class="form-control" id="step6_Other" name="step6_Other" height="300px">
-
-                </textarea>
+               <textarea class="form-control" id="step6_Other" name="step6_Other"></textarea>
                <br>
                <button onClick="processStep6()" class="btn btn-primary">Continue</button>
             </div>
@@ -610,7 +608,7 @@ Even if you have attached a resume, this section must be completed.</p>
             
             
             <div id="ResumeStep12">
-              
+              just to make sure
                <button onclick="submitForm()" class="btn btn-primary">Submit Data</button>
             </div>
          </form>
