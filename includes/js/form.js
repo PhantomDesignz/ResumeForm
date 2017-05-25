@@ -281,6 +281,11 @@ function processStep9() {
 		}
 }
 
+function processStep10() {
+	_("ResumeStep10").style.display = "none";
+	_("ResumeStep12").style.display = "block";
+}
+
 function back1(){
 	_("ResumeStep1").style.display = "block";
 	_("ResumeStep2").style.display = "none";

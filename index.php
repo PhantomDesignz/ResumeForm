@@ -516,12 +516,11 @@ Even if you have attached a resume, this section must be completed.</p>
                </div>
                <p>List the jobs you held, duties performed, skills used or learned, advancements or promotions while you worked at this company:</p>
                <textarea class="form-control" id="step7_Duties" name="step7_Duties">
-
-                </textarea>
+                </textarea><br>
                <p>What was your reason for leaving this company?</p>
                <textarea class="form-control" id="step7_LeavingReason" name="step7_LeavingReason">
-
-                </textarea>
+                </textarea><br>
+                <br>
                <button onClick="processStep7()" class="btn btn-primary">Continue</button>
             </div>
             <div id="ResumeStep8">
@@ -605,7 +604,7 @@ Even if you have attached a resume, this section must be completed.</p>
             	<h2>Resume - Step 10 of 14</h2>
             	<div id="step10_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
             	<p>Your resume is required to complete the application process. Please upload it here.</p>
-            	<input name="step10_File" type="file" id="step10_File"><br>
+            	<input name="step10_File" type="file" size="90" id="step10_File"><br>
             	<button onclick="processStep10()" class="btn btn-primary">Continue</button>
             </div>
             

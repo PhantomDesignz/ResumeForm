@@ -91,6 +91,12 @@ $step9_phone1 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone1']);
 $step9_phone2 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone2']);
 $step9_phone3 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone3']);
 
+// Escape user step6 inputs for security
+$step10_File = mysqli_real_escape_string($link, $_REQUEST['step10_File']);
+
+
+
+
 // attempt insert step1 query execution
 $sql = "INSERT INTO resumestep1 (
 step1_FirstName, 
@@ -261,6 +267,39 @@ step9_Rel3
 '$step9_rel2',
 '$step9_rel3'
 );";
+
+// Upload Resume
+
+if(isset($_POST['Resume']) && $_FILES['step10_File']['size'] > 0)
+{
+$fileName = $_FILES['step10_File']['name'];
+$tmpName  = $_FILES['step10_File']['tmp_name'];
+$fileSize = $_FILES['step10_File']['size'];
+$fileType = $_FILES['step10_File']['type'];
+
+$fp      = fopen($tmpName, 'r');
+$content = fread($fp, filesize($tmpName));
+$content = addslashes($content);
+fclose($fp);
+
+if(!get_magic_quotes_gpc())
+{
+    $fileName = addslashes($fileName);
+}
+
+$sql .= "INSERT INTO resumestep10 (
+step10_Name, 
+step10_Size, 
+step10_Type, 
+step10_Content 
+) VALUES (
+'$fileName', 
+'$fileSize', 
+'$fileType', 
+'$content'
+);";
+
+} 
 
 if(mysqli_multi_query($link, $sql)){
     echo "<h1> Your Resume has successfully been submitted.</h1>";
