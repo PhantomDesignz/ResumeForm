@@ -34,6 +34,10 @@
     display: none;
 }
 
+#step11_error {
+    display: none;
+}
+
 #ResumeStep2 {
 		display: none;
 }
@@ -62,6 +66,10 @@
 		display: none;
 }
 #ResumeStep10 {
+		display: none;
+}
+
+#ResumeStep11 {
 		display: none;
 }
 

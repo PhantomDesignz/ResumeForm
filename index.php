@@ -600,13 +600,66 @@ Even if you have attached a resume, this section must be completed.</p>
             	<div id="step10_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
             	<p>Your resume is required to complete the application process. Please upload it here.</p>
             	<input name="step10_File" type="file" size="90" id="step10_File"><br>
-            	<button onclick="processStep10()" class="btn btn-primary">Continue</button>
+            	<button onclick="processStep10()" name="Resume" class="btn btn-primary">Continue</button>
+            </div>
+            <div id="ResumeStep11">
+            	<h2>How did you hear about us? - Step 11 of 14</h2>
+            	<div id="step11_error" class="alert alert-warning">Please ensure that you filled out each field properly.</div>
+                 
+               <div class="form-group">
+                  <label class="control-label" for="step11_HearAbout">* Choose One: </label><br>
+                  <label class="radio-inline" for="temp-0">
+                  <input type="radio" name="step11_HearAbout" id="step11_HearAbout" value="Newspaper" checked="checked">
+                  Newspaper
+                  </label>
+                  <label class="radio-inline" for="temp-1">
+                  <input type="radio" name="step11_HearAbout" id="step11_HearAbout" value="Highway Sign">
+                  Highway Sign
+                  </label>
+                  <label class="radio-inline" for="temp-2">
+                  <input type="radio" name="step11_HearAbout" id="step11_HearAbout" value="Friend">
+                  Friend
+                  </label>
+                  <label class="radio-inline" for="temp-3">
+                  <input type="radio" name="step11_HearAbout" id="step11_HearAbout" value="Word of Mouth">
+                  Word of Mouth
+                  </label>
+                  <label class="radio-inline" for="temp-4">
+                  <input type="radio" name="step11_HearAbout" id="step11_HearAbout" value="Company Website">
+                  Company Website
+                  </label>
+                  <label class="radio-inline" for="temp-5">
+                  <input type="radio" name="step11_HearAbout" id="step11_HearAbout" value="Other Website">
+                  Other Website
+                  </label>
+                  <label class="radio-inline" for="temp-6">
+                  <input type="radio" name="step11_HearAbout" id="step11_HearAbout" value="Other">
+                  Other
+                  </label>
+                <div class="form-group">
+                   <label class="control-label" for="step11_Other">If you chose Other, or Other Website, please specify: </label>
+                   <input name="step11_Other"class="form-control" id="step11_Other" placeholder="">
+                </div>
+               </div>
+            	<button onclick="processStep11()" name="Resume" class="btn btn-primary">Continue</button>
             </div>
             
-            
             <div id="ResumeStep12">
-              just to make sure
-               <button onclick="submitForm()" class="btn btn-primary">Submit Data</button>
+                <p>I certify that I have not purposely withheld any information that might adversely affect my chances for hiring. I attest to the fact that the answers given by me are true and correct to the best of my knowledge and ability. I understand that any omission (including any misstatement) of material fact on this application or on any document used to secure employment can be grounds for rejection of application or, if I am employed by this company, terms for my immediate expulsion from the company. 
+                <br><br>
+                I permit the company to examine my references, record of employment, education record, and any other information I have provided. I authorize the references I have listed to disclose any information related to my work record and my professional experiences with them, without giving me prior notice of such disclosure. In addition, I release the company, my former employers and all persons, corporations, partnerships & associations from any & all claims, demands or liabilities arising out of or in any way related to such examination or revelation.</p>
+                <div class="form-group">
+                  <label class="control-label" for="ResumeSubmit">* Choose One: </label><br>
+                  <label class="radio-inline" for="temp-0">
+                  <input type="radio" name="ResumeSubmitY" id="ResumeSubmitY" value="yes">
+                  Yes
+                  </label>
+                  <label class="radio-inline" for="temp-0">
+                  <input type="radio" name="ResumeSubmitN" id="ResumeSubmitN" value="no">
+                  No
+                  </label>
+                </div>
+               <button onclick="submitForm()" name="Resume" id="Resume" class="btn btn-primary">Submit Resume</button>
             </div>
          </form>
       </div>

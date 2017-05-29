@@ -283,9 +283,27 @@ function processStep9() {
 		}
 }
 
+
+function processStep11() {
+	step11_other = _("step11_Other").value;
+	step11_hearabout = _("step11_HearAbout").value;
+
+	
+	
+	if( step9_name1.length > 1
+	    && step9_name2.length > 2
+		  ) {
+			_("ResumeStep11").style.display = "none";
+			_("ResumeStep12").style.display = "block";
+		}
+		else {
+			_("step11_error").style.display = "block";
+		}
+}
+
 function processStep10() {
 	_("ResumeStep10").style.display = "none";
-	_("ResumeStep12").style.display = "block";
+	_("ResumeStep11").style.display = "block";
 }
 
 function back1(){
@@ -300,8 +318,17 @@ function back2(){
 	_("ResumeStep3").style.display = "none";
 	_("ResumeStep4").style.display = "none";
 }
+
+
+$(function() {
+        var checked = $("input[name=ResumeSubmitY]").prop('checked');
+        console.log(checked);
+        if(checked) { $("#Resume").show();  } 
+        else { $("Resume").hide(); }
+  });
 function submitForm(){
 	_("Resume").method = "post";
+	_("Resume").name = "Resume";
 	_("Resume").action = "submit.php";
 	_("Resume").submit();
 }

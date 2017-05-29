@@ -80,7 +80,7 @@ $step8_injuries = mysqli_real_escape_string($link, $_REQUEST['step8_Injuries']);
 $step8_additionalinfo = mysqli_real_escape_string($link, $_REQUEST['step8_AdditionalInfo']);
 $step8_hobbiesinterests = mysqli_real_escape_string($link, $_REQUEST['step8_HobbiesInterests']);
 
-// Escape user step6 inputs for security
+// Escape user step9 inputs for security
 $step9_name1 = mysqli_real_escape_string($link, $_REQUEST['step9_Name1']);
 $step9_name2 = mysqli_real_escape_string($link, $_REQUEST['step9_Name2']);
 $step9_name3 = mysqli_real_escape_string($link, $_REQUEST['step9_Name3']);
@@ -91,8 +91,12 @@ $step9_phone1 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone1']);
 $step9_phone2 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone2']);
 $step9_phone3 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone3']);
 
-// Escape user step6 inputs for security
+// Escape user step10 inputs for security
 $step10_File = mysqli_real_escape_string($link, $_REQUEST['step10_File']);
+
+// Escape user step11 inputs for security
+$step11_other = mysqli_real_escape_string($link, $_REQUEST['step10_HearAbout']);
+$step11_hearabout = mysqli_real_escape_string($link, $_REQUEST['step10_Other']);
 
 
 
@@ -270,23 +274,23 @@ step9_Rel3
 
 // Upload Resume
 
- if(isset($_POST['Resume']) && $_FILES['step10_File']['size'] > 0)
-{
+// needs permission 777 chmod
+
+
+$uploaddir = $_SERVER['DOCUMENT_ROOT'].'/ResumeForm/uploads/';
+$uploadfile = $uploaddir . basename($_FILES['step10_File']['name']);
 $fileName = $_FILES['step10_File']['name'];
 $tmpName  = $_FILES['step10_File']['tmp_name'];
 $fileSize = $_FILES['step10_File']['size'];
 $fileType = $_FILES['step10_File']['type'];
 
-$fp      = fopen($tmpName, 'r');
-$content = fread($fp, filesize($tmpName));
-$content = addslashes($content);
-fclose($fp);
-
-if(!get_magic_quotes_gpc())
-{
-    $fileName = addslashes($fileName);
-}
-
+if (move_uploaded_file($tmpName, $uploadfile))
+{       
+    // Moved
+     echo 'moved file to destination directory';
+    
+    // Update Database
+    
 $sql .= "INSERT INTO resumestep10 (
 step10_Name, 
 step10_Size, 
@@ -299,7 +303,20 @@ step10_Content
 '$content'
 );";
 
-} 
+
+    
+} else {
+    echo 'Your Resume File Failed To Upload.. ';
+}
+
+// attempt insert step11 query execution
+$sql .= "INSERT INTO resumestep11 (
+step11_HearAbout,
+step11_Other
+) VALUES (
+'$step11_hearabout',
+'$step11_other'
+);";
 
 if(mysqli_multi_query($link, $sql)){
     echo "<h1> Your Resume has successfully been submitted.</h1>";
