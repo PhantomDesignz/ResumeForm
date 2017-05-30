@@ -22,7 +22,6 @@ $step1_city = mysqli_real_escape_string($link, $_REQUEST['step1_City']);
 $step1_postal = mysqli_real_escape_string($link, $_REQUEST['step1_Postal']);
 $step1_eligible = mysqli_real_escape_string($link, $_REQUEST['step1_Eligible']);
 $step1_prevemployed = mysqli_real_escape_string($link, $_REQUEST['step1_PrevEmployed']);
-$step1_positions = mysqli_real_escape_string($link, $_REQUEST['step1_Positions']);
 $step1_positions = implode(',',$_POST['step1_Positions']);
 
 // Escape user step2 inputs for security
@@ -95,8 +94,8 @@ $step9_phone3 = mysqli_real_escape_string($link, $_REQUEST['step9_Phone3']);
 $step10_File = mysqli_real_escape_string($link, $_REQUEST['step10_File']);
 
 // Escape user step11 inputs for security
-$step11_other = mysqli_real_escape_string($link, $_REQUEST['step10_HearAbout']);
-$step11_hearabout = mysqli_real_escape_string($link, $_REQUEST['step10_Other']);
+$step11_other = mysqli_real_escape_string($link, $_REQUEST['step11_HearAbout']);
+$step11_hearabout = mysqli_real_escape_string($link, $_REQUEST['step11_Other']);
 
 
 
@@ -272,12 +271,22 @@ step9_Rel3
 '$step9_rel3'
 );";
 
+// attempt insert step11 query execution
+$sql .= "INSERT INTO resumestep11 (
+step11_HearAbout,
+step11_Other
+) VALUES (
+'$step11_hearabout',
+'$step11_other'
+);";
+
+
 // Upload Resume
 
 // needs permission 777 chmod
 
 
-$uploaddir = $_SERVER['DOCUMENT_ROOT'].'/ResumeForm/uploads/';
+$uploaddir = $_SERVER['DOCUMENT_ROOT'].'/ResumeForm/ResumeForm/uploads/';
 $uploadfile = $uploaddir . basename($_FILES['step10_File']['name']);
 $fileName = $_FILES['step10_File']['name'];
 $tmpName  = $_FILES['step10_File']['tmp_name'];
@@ -309,14 +318,6 @@ step10_Content
     echo 'Your Resume File Failed To Upload.. ';
 }
 
-// attempt insert step11 query execution
-$sql .= "INSERT INTO resumestep11 (
-step11_HearAbout,
-step11_Other
-) VALUES (
-'$step11_hearabout',
-'$step11_other'
-);";
 
 if(mysqli_multi_query($link, $sql)){
     echo "<h1> Your Resume has successfully been submitted.</h1>";
